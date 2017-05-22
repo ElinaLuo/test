@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>test</title>
+    <style>
+        #list {
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        .Fix:after {
+            display: block;
+            content: '';
+            height: 0;
+            clear: both;
+        }
+
+        .item {
+            background-repeat: repeat-x;
+            background-position: 0 bottom;
+            background-size: auto 1px;
+            padding: 10px;
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            font-size: 12px;
+            border: 1px solid #f00;
+        }
+
+        .item .pic {
+            margin-right: 10px;
+            width: 66px;
+            height: 66px;
+            margin-top: 7px;
+        }
+
+        .item .pic img {
+            border-radius: 3px;
+            width: 66px;
+            height: 66px;
+        }
+
+        .item .content {
+            -webkit-box-flex: 1;
+            position: relative;
+            padding-top: 6px;
+        }
+
+        .item .content .name {
+            font-size: 16px;
+            padding-bottom: 2px;
+        }
+
+        .item .content .shopname {
+            display: block;
+            white-space: normal;
+            max-width: none;
+            color: #323232;
+            margin-bottom: 2px;
+            font-size: 16px;
+            font-weight: 400;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            vertical-align: top;
+        }
+
+        .item .content .shopname .shop_name {
+            float: left;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: block;
+            margin-right: 3px;
+            line-height: 25px;
+            vertical-align: middle;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+<div id="list">
+    <span class="item" style="height: 40px;">placeholder 1</span>
+    <span class="item" style="height: 40px;">placeholder 2</span>
+    <span class="item" style="height: 40px;">placeholder 3</span>
+    <span class="item" style="height: 40px;">placeholder 4</span>
+    <span class="item" style="height: 40px;">placeholder 5</span>
+    <span class="item" style="height: 40px;">placeholder 6</span>
+    <span class="item" style="height: 40px;">placeholder 7</span>
+    <span class="item" style="height: 40px;">placeholder 8</span>
+    <span class="item" style="height: 40px;">placeholder 9</span>
+    <span class="item" style="height: 40px;">placeholder 10</span>
+    <span class="item" style="height: 40px;">placeholder 11</span>
+    <span class="item" style="height: 40px;">placeholder 12</span>
+    <span class="item" style="height: 40px;">placeholder 13</span>
+    <span class="item" style="height: 40px;">placeholder 14</span>
+    <span class="item" style="height: 40px;">placeholder 15</span>
+    <span class="item" style="height: 40px;">placeholder 16</span>
+    <span class="item" style="height: 40px;">placeholder 17</span>
+    <span class="item" style="height: 40px;">placeholder 18</span>
+    <span class="item" style="height: 40px;">placeholder 19</span>
+    <span class="item" style="height: 40px;">placeholder 20</span>
+    <span class="item" style="height: 40px;">placeholder 21</span>
+    <span class="item" style="height: 40px;">placeholder 22</span>
+    <span class="item" style="height: 40px;">placeholder 23</span>
+    <span class="item" style="height: 40px;">placeholder 24</span>
+    <span class="item" style="height: 40px;">placeholder 25</span>
+    <span class="item" style="height: 40px;">placeholder 26</span>
+    <span class="item" style="height: 40px;">placeholder 27</span>
+    <span class="item" style="height: 40px;">placeholder 28</span>
+    <span class="item" style="height: 40px;">placeholder 29</span>
+    <span class="item" style="height: 40px;">placeholder 30</span>
+    <span class="item" style="height: 40px;">placeholder 31</span>
+    <span class="item" style="height: 40px;">placeholder 32</span>
+    <span class="item" style="height: 40px;">placeholder 33</span>
+    <span class="item" style="height: 40px;">placeholder 34</span>
+    <span class="item" style="height: 40px;">placeholder 35</span>
+    <span class="item" style="height: 40px;">placeholder 36</span>
+    <span class="item" style="height: 40px;">placeholder 37</span>
+    <span class="item" style="height: 40px;">placeholder 38</span>
+    <span class="item" style="height: 40px;">placeholder 39</span>
+    <span class="item" style="height: 40px;">placeholder 40</span>
+    <span class="item" style="height: 40px;">placeholder 41</span>
+</div>
+<script type="text/javascript" src="./index.js"></script>
+<script>
+    MyTest.testForOf();
+    MyTest.testForin();
+    MyTest.testMap();
+    
+</script>
+</body>
+</html>
