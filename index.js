@@ -907,10 +907,10 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var list = [1, 2, 3];
+	var list = [0, 1, 2];
 
 	var MyTest = {
-		testForOf: function testForOf() {
+		testForOf: function testForOf(cb) {
 			var _iteratorNormalCompletion = true;
 			var _didIteratorError = false;
 			var _iteratorError = undefined;
@@ -920,6 +920,7 @@
 					var item = _step.value;
 
 					console.log('testForOf = ' + item);
+					cb(item);
 				}
 			} catch (err) {
 				_didIteratorError = true;
@@ -936,14 +937,16 @@
 				}
 			}
 		},
-		testForin: function testForin() {
+		testForin: function testForin(cb) {
 			for (var item in list) {
 				console.log('testForin = ' + item);
+				cb(item);
 			}
 		},
-		testMap: function testMap() {
+		testMap: function testMap(cb) {
 			list.map(function (item) {
 				console.log('testMap = ' + item);
+				cb(item);
 			});
 		}
 	};

@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <title>test</title>
     <style>
-        #list {
-            overflow-x: auto;
-            white-space: nowrap;
-        }
         .Fix:after {
             display: block;
             content: '';
@@ -17,12 +13,13 @@
         }
 
         .item {
+            background-image: url(//www.dpfile.com/mod/app-m-style/2.9.9/css/img/repeat-x.png);
             background-repeat: repeat-x;
             background-position: 0 bottom;
             background-size: auto 1px;
             padding: 10px;
             position: relative;
-            display: inline-block;
+            display: -webkit-box;
             text-decoration: none;
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
             font-size: 12px;
@@ -81,53 +78,29 @@
 </head>
 <body>
 <div id="list">
-    <span class="item" style="height: 40px;">placeholder 1</span>
-    <span class="item" style="height: 40px;">placeholder 2</span>
-    <span class="item" style="height: 40px;">placeholder 3</span>
-    <span class="item" style="height: 40px;">placeholder 4</span>
-    <span class="item" style="height: 40px;">placeholder 5</span>
-    <span class="item" style="height: 40px;">placeholder 6</span>
-    <span class="item" style="height: 40px;">placeholder 7</span>
-    <span class="item" style="height: 40px;">placeholder 8</span>
-    <span class="item" style="height: 40px;">placeholder 9</span>
-    <span class="item" style="height: 40px;">placeholder 10</span>
-    <span class="item" style="height: 40px;">placeholder 11</span>
-    <span class="item" style="height: 40px;">placeholder 12</span>
-    <span class="item" style="height: 40px;">placeholder 13</span>
-    <span class="item" style="height: 40px;">placeholder 14</span>
-    <span class="item" style="height: 40px;">placeholder 15</span>
-    <span class="item" style="height: 40px;">placeholder 16</span>
-    <span class="item" style="height: 40px;">placeholder 17</span>
-    <span class="item" style="height: 40px;">placeholder 18</span>
-    <span class="item" style="height: 40px;">placeholder 19</span>
-    <span class="item" style="height: 40px;">placeholder 20</span>
-    <span class="item" style="height: 40px;">placeholder 21</span>
-    <span class="item" style="height: 40px;">placeholder 22</span>
-    <span class="item" style="height: 40px;">placeholder 23</span>
-    <span class="item" style="height: 40px;">placeholder 24</span>
-    <span class="item" style="height: 40px;">placeholder 25</span>
-    <span class="item" style="height: 40px;">placeholder 26</span>
-    <span class="item" style="height: 40px;">placeholder 27</span>
-    <span class="item" style="height: 40px;">placeholder 28</span>
-    <span class="item" style="height: 40px;">placeholder 29</span>
-    <span class="item" style="height: 40px;">placeholder 30</span>
-    <span class="item" style="height: 40px;">placeholder 31</span>
-    <span class="item" style="height: 40px;">placeholder 32</span>
-    <span class="item" style="height: 40px;">placeholder 33</span>
-    <span class="item" style="height: 40px;">placeholder 34</span>
-    <span class="item" style="height: 40px;">placeholder 35</span>
-    <span class="item" style="height: 40px;">placeholder 36</span>
-    <span class="item" style="height: 40px;">placeholder 37</span>
-    <span class="item" style="height: 40px;">placeholder 38</span>
-    <span class="item" style="height: 40px;">placeholder 39</span>
-    <span class="item" style="height: 40px;">placeholder 40</span>
-    <span class="item" style="height: 40px;">placeholder 41</span>
+    <p class="item_1" style="height: 40px;">placeholder 1</p>
+    <p class="item_1" style="height: 40px;">placeholder 2</p>
+    <p class="item_1" style="height: 40px;">placeholder 3</p>
+
+    <p class="item_2" style="height: 40px;">placeholder 4</p>
+    <p class="item_2" style="height: 40px;">placeholder 5</p>
+    <p class="item_2" style="height: 40px;">placeholder 6</p>
+
+    <p class="item_3" style="height: 40px;">placeholder 7</p>
+    <p class="item_3" style="height: 40px;">placeholder 8</p>
+    <p class="item_3" style="height: 40px;">placeholder 9</p>
 </div>
 <script type="text/javascript" src="./index.js"></script>
 <script>
-    MyTest.testForOf();
-    MyTest.testForin();
-    MyTest.testMap();
+    MyTest.testForOf(function(index){
+        document.getElementsByClassName('item_1')[index].innerHTML = 'for of ' + index; 
+    });
+    MyTest.testForin(function(index){
+        document.getElementsByClassName('item_2')[index].innerHTML = 'for in ' + index; 
+    });
+    MyTest.testMap(function(index){
+        document.getElementsByClassName('item_3')[index].innerHTML = 'for map ' + index; 
+    });
     
 </script>
 </body>
